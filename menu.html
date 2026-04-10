@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – La Sueva Torino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav>
+    <div class="nav-logo">La <span>Sueva</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="contatti.html">Contatti e Dove Siamo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="menu.html" onclick="closeMenu()">Menu</a>
+    <a href="contatti.html" onclick="closeMenu()">Contatti e Dove Siamo</a>
+  </div>
+
+  <!-- ══════════ PAGE HEADER ══════════ -->
+  <header class="page-header reveal">
+    <p class="section-label">Scopri ORA</p>
+    <h1 class="section-title">Il Nostro Menu Completo</h1>
+  </header>
+
+  <!-- ══════════ MENU ══════════ -->
+  <section id="menu">
+    <p class="section-label reveal">Esplora le Categorie</p>
+    <h2 class="section-title reveal">Scegli la tua<br><em style="font-style:italic;color:var(--rosso)">preferita</em>
+    </h2>
+    <div class="divider reveal"></div>
+
+    <!-- TABS -->
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" onclick="showTab('pizze')">🍕 Pizze</button>
+      <button class="tab-btn" onclick="showTab('focacce')">🥖 Focacce</button>
+      <button class="tab-btn" onclick="showTab('calzoni')">🥙 Calzoni</button>
+      <button class="tab-btn" onclick="showTab('farinate')">🟡 Farinate</button>
+      <button class="tab-btn" onclick="showTab('dolci')">🍮 Dolci</button>
+      <button class="tab-btn" onclick="showTab('bevande')">🥤 Bevande</button>
+      <button class="tab-btn" onclick="showTab('birre')">🍺 Birre</button>
+      <button class="tab-btn" onclick="showTab('vini')">🍷 Vini</button>
+    </div>
+
+    <!-- PIZZE -->
+    <div class="menu-section active" id="tab-pizze">
+      <div style="width: 100%; text-align: center; margin-bottom: 2rem; color: var(--text-muted); font-size: 0.95rem;">
+        <p><strong>Rinforzo:</strong> + 2,00 €</p>
+        <p>Le pizze piccole costano come quelle normali.<br>A doppio condimento il prezzo varia.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Bufalina</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella di bufala, mozzarella</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Rustica</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate e salsiccia</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">La Calabrisella</span><span class="card-price">€ 12,00</span></div>
+          <p class="card-desc">Mozzarella, melanzane grigliate, 'nduja, ricotta salata</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Silana</span><span class="card-price">€ 14,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate saltate in padella, spianata calabra, e una spolverata di ricotta salata</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Margherita</span><span class="card-price">€ 7,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella</p>
+          <div class="badge-row"><span class="badge badge-popolare">🥗 Classica</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Napoli</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, acciughe</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Salamino</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, salamino piccante</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Würstel</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, würstel</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Funghi</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, funghi</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Giacomino</span><span class="card-price">€ 7,50</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, peperoncino</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Patatine</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patatine fritte</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Prosciutto</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Parmense</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, crudo di Parma</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Campagnola</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, pomodorini, grana a scaglie, basilico</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Sueva</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, cipolla</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Della Casa</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Meneghetti</span><span class="card-price">€ 8,50</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, gorgonzola</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Formaggi</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, gorgonzola, fontina</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Tonno e Cipolla</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, tonno, cipolla</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Mega</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, gorgonzola, fontina, mozzarella di bufala, prosciutto cotto dopo cottura</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Marsigliese</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, gorgonzola, cipolla</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Spanna</span><span class="card-price">€ 12,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, funghi, panna, crudo di Parma</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Marinara</span><span class="card-price">€ 8,50</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, acciughe, capperi, olive</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Prosciutto e Funghi</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, funghi</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Capricciosa</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, funghi, carciofini, olive, salamino piccante</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">4 Stagioni</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, funghi, carciofini, olive</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Ligure</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, tonno, cipolla, gorgonzola</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Fantasia</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, funghi, carciofini, acciughe, capperi, olive</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cime e Salsiccia</span><span class="card-price">€ 9,50</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, cime di rapa, salsiccia fresca</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Verdura Cotta</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, melanzane e zucchine grigliate, peperoni arrostiti</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Verdura Cruda</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate, melanzane, scarola, cipolla, peperoni crudi</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Patate</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate, rosmarino</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Debora</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate, fontina, rosmarino, speck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Chianello</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patate, gorgonzola, rosmarino</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Fior di Bue</span><span class="card-price">€ 12,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, bue affumicato, rucola, grana a scaglie</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Piadina</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Crudo di Parma</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Paesana</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto, verza, würstel</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Maria Luisa</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, melanzane, aglio</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Aglio Prezzemolo</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, aglio, prezzemolo</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Sfiziosa</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patatine fritte, würstel, uovo Bismarck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Idea</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, tonno, peperoni arrostiti, gorgonzola</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Bismarck</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, uovo Bismarck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Greca</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, tonno, olive, uovo sodo</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Bacon</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, bacon, cipolla, uovo Bismarck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Girasole</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, zucchine alla julienne, uovo Bismarck, grana a scaglie</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">La Nonna</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, funghi, briè, salamino piccante, patè d'olive</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Spilinga</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, cipolla, 'nduja, uovo Bismarck</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Trevisana</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, radicchio, salsiccia</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Tommy</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, cime di rapa, melanzane e zucchine grigliate, peperoni arrostiti, salsiccia fresca</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Filadelfia</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, funghi, salsiccia fresca</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Maratona</span><span class="card-price">€ 9,50</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, fontina</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Rucola e Mais</span><span class="card-price">€ 8,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, rucola, mais</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Mare e Monti</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, fontina</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Atomica</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Mozzarella, cipolla, pomodorini, 'nduja</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Gorgo e Pere</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Mozzarella, gorgonzola, pere</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Gorgo e Noci</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Mozzarella, gorgonzola, noci</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Gioia</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, patatine fritte, würstel</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Fumè</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Mozzarella, scamorza, pomodorini, speck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Callà</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Mozzarella, tonno, patate lesse, grana</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Albertone</span><span class="card-price">€ 12,00</span></div>
+          <p class="card-desc">Mozzarella, patate lesse, rosmarino, lardo</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Delizia</span><span class="card-price">€ 14,00</span></div>
+          <p class="card-desc">Mozzarella di bufala, pomodorini, fontina, zucchine</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOCACCE -->
+    <div class="menu-section" id="tab-focacce">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia 4 Amici</span><span class="card-price">€ 15,00</span></div>
+          <p class="card-desc">Pomodoro ciliegino, origano, burrata o stracciatella e prosciutto crudo</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Della</span><span class="card-price">€ 15,00</span></div>
+          <p class="card-desc">Mozzarella, mortadella, crema di pistacchio, burrata o stracciatella e granella di pistacchio</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Speciale</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Lardo</span><span class="card-price">€ 9,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Crudo</span><span class="card-price">€ 10,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Speck</span><span class="card-price">€ 10,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Cotto</span><span class="card-price">€ 9,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Stracchino e Crudo</span><span class="card-price">€ 12,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Stracchino e Rucola</span><span class="card-price">€ 9,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Briè e Speck</span><span class="card-price">€ 10,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Aglio e Olio</span><span class="card-price">€ 4,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Bue, Rucola e Grana</span><span class="card-price">€ 11,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Provola e Crudo</span><span class="card-price">€ 12,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Stracciatella, Pomodoro Pachino e Basilico</span><span class="card-price">€ 11,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Trionto</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Mozzarella, stracchino e 'nduja</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Italia</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodorini, mozzarella di bufala, basilico tutto a crudo</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Italia con Crudo</span><span class="card-price">€ 15,00</span></div>
+          <p class="card-desc">Pomodorini, mozzarella di bufala, basilico, origano, crudo di Parma</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia di Pietro</span><span class="card-price">€ 14,00</span></div>
+          <p class="card-desc">Bue affumicato, pomodorini, basilico, burrata</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Eboli</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Scarola, acciughe, capperi, olive</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Focaccia Il Nonno</span><span class="card-price">€ 11,00</span></div>
+          <p class="card-desc">Pomodorini, rucola, grana a scaglie, lardo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALZONI -->
+    <div class="menu-section" id="tab-calzoni">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Calzone</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, funghi</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Calzone della Casa</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Mozzarella, prosciutto cotto, stracchino</p>
+          <div class="badge-row"><span class="badge badge-popolare">👑 Della Casa</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARINATE -->
+    <div class="menu-section" id="tab-farinate">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Normale</span><span class="card-price">€ 7,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span><span class="badge badge-vegan">🌱 Vegano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Calabrese</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Salamino piccante</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Romagnola</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Crudo di Parma</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Tirolese</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Speck</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Olive</span><span class="card-price">€ 8,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span><span class="badge badge-vegan">🌱 Vegano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Rosmarino</span><span class="card-price">€ 8,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span><span class="badge badge-vegan">🌱 Vegano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Lardo</span><span class="card-price">€ 10,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Riviera</span><span class="card-price">€ 9,00</span></div>
+          <p class="card-desc">Olive, rosmarino</p>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span><span class="badge badge-vegan">🌱 Vegano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Gustosa</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Gorgonzola, fontina</p>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Veneta</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Cipolla, salsiccia fresca</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cime e Salsiccia</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Cime di rapa, salsiccia fresca</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cime e Salamino</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Cime di rapa, salamino</p>
+          <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Funghi Olive e Acciughe</span><span class="card-price">€ 10,00</span></div>
+          <p class="card-desc">Funghi, olive, acciughe</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOLCI -->
+    <div class="menu-section" id="tab-dolci">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cassata Siciliana</span><span class="card-price">€ 4,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cannolo Siciliano</span><span class="card-price">€ 4,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Bunet</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Creme Caramel</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Panna Cotta</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Tiramisù</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Crema Catalana</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Meringa al Cioccolato Caldo</span><span class="card-price">€ 7,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Profiteroles</span><span class="card-price">€ 4,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Ananas</span><span class="card-price">€ 4,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🥗 Vegetariano</span><span class="badge badge-vegan">🌱 Vegano</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Dolce Misto</span><span class="card-price">€ 7,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Sorbetto al Limone / Mela Verde</span><span class="card-price">€ 4,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Semifreddo Pistacchio / Caramello Salato</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Cheesecake ai Frutti di Bosco</span><span class="card-price">€ 5,00</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Gelato Misto</span><span class="card-price">€ 5,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Crema</span><span class="card-price">€ 4,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Limone</span><span class="card-price">€ 4,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Affogato al Caffè</span><span class="card-price">€ 6,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Affogato al Cioccolato</span><span class="card-price">€ 6,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Affogato al Whiskey</span><span class="card-price">€ 6,00</span></div>
+          <div class="badge-row"><span class="badge badge-veg">🍦 Gelati</span><span class="badge badge-18">🔞 +18</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEVANDE -->
+    <div class="menu-section" id="tab-bevande">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Coca Cola (Alla Spina)</span><span class="card-price">€ 3,50</span></div>
+          <p class="card-desc">20 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Coca Cola (Alla Spina)</span><span class="card-price">€ 4,50</span></div>
+          <p class="card-desc">40 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Panachè</span><span class="card-price">€ 4,50</span></div>
+          <p class="card-desc">20 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Panachè</span><span class="card-price">€ 5,50</span></div>
+          <p class="card-desc">40 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Coca Cola, Fanta, Sprite, The (In Lattina)</span><span class="card-price">€ 3,50</span></div>
+          <p class="card-desc">33 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Caffè</span><span class="card-price">€ 1,50</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Amaro</span><span class="card-price">€ 3,00</span></div>
+          <div class="badge-row"><span class="badge badge-18">🔞 +18</span></div>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Whiskey</span><span class="card-price">€ 4,00</span></div>
+          <div class="badge-row"><span class="badge badge-18">🔞 +18</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BIRRE -->
+    <div class="menu-section" id="tab-birre">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Birra Stella Artois Bionda / Leffe Rouge</span><span class="card-price">€ 3,50</span></div>
+          <p class="card-desc">Alla Spina - 20 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Birra Stella Artois Bionda / Leffe Rouge</span><span class="card-price">€ 4,50</span></div>
+          <p class="card-desc">Alla Spina - 40 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Beck's, Ceres</span><span class="card-price">€ 4,50</span></div>
+          <p class="card-desc">In Bottiglia - 33 cl</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VINI -->
+    <div class="menu-section" id="tab-vini">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Dolcetto, Arneis, Rosato</span><span class="card-price">€ 12,50</span></div>
+          <p class="card-desc">In Bottiglia - 75 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Prosecco</span><span class="card-price">€ 15,50</span></div>
+          <p class="card-desc">In Bottiglia - 75 cl</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Dolcetto, Arneis, Rosato</span><span class="card-price">€ 4,50</span></div>
+          <p class="card-desc">In Caraffa - 1/4 lt</p>
+        </div>
+        <div class="menu-card">
+          <div class="card-header"><span class="card-name">Dolcetto, Arneis, Rosato</span><span class="card-price">€ 7,00</span></div>
+          <p class="card-desc">In Caraffa - 1/2 lt</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <p>© 2026 <strong>Pizzeria La Sueva</strong> · Via Duchessa Jolanda 32, Torino · Tel. 011 434 6067</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>

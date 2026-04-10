@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Sueva – Pizzeria Torino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav>
+    <div class="nav-logo">La <span>Sueva</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contatti.html">Contatti e Dove Siamo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="menu.html" onclick="closeMenu()">Menu</a>
+    <a href="contatti.html" onclick="closeMenu()">Contatti e Dove Siamo</a>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="home">
+    <div class="hero-badge">🍕 Pizzeria · Torino dal cuore</div>
+    <h1 class="hero-title">La <em>Sueva</em></h1>
+    <p class="hero-sub">Via Duchessa Jolanda 32, Torino — Tel. 011 434 6067</p>
+    <div class="hero-btns">
+      <a href="menu.html" class="btn btn-primary">Scopri il Menu</a>
+      <!-- Just Eat -->
+      <a href="https://www.justeat.it/restaurants-pizzeria-lasueva-torino/menu" target="_blank" rel="noopener"
+        class="btn btn-je">🛵 Just Eat</a>
+      <!-- Glovo -->
+      <a href="https://glovoapp.com/it/it/torino/stores/la-sueva-2-0?utm_source=google&utm_medium=organic&utm_campaign=google_reserve_place_order_action"
+        target="_blank" rel="noopener" class="btn btn-glovo">🍔 Glovo</a>
+    </div>
+    <div class="hero-orari">
+      <div class="orario-item"><strong>📍 Torino</strong><span>Duchessa Jolanda, 32</span></div>
+      <div class="orario-item"><strong>📞 011 434 6067</strong><span>Chiamaci per ordinare</span></div>
+      <div class="orario-item"><strong>🕒 Orari</strong><span>Lun-Ven: 12:15-14:30, 18:30-23:30<br>Sab: 18:30-23:30 |
+          Dom: Chiuso</span></div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about">
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=900&q=80"
+        alt="Pizzeria La Sueva — impasto" loading="lazy" />
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <p class="section-label">Chi Siamo</p>
+      <h2 class="section-title">Passione artigianale<br>nel cuore di Torino</h2>
+      <div class="divider"></div>
+      <p class="section-desc">
+        Da La Sueva trovi pizze classiche e creative, focacce farcite, farinate liguri e molto altro.
+        Ingredienti selezionati, impasto lavorato con cura e un'atmosfera che sa di casa.
+      </p>
+      <div class="about-features">
+        <div class="feat"><strong>🌿 Ingredienti freschi</strong><span>Prodotti selezionati ogni giorno</span></div>
+        <div class="feat"><strong>🍕 Cottura perfetta</strong><span>Ogni pizza è preparata a regola d'arte</span></div>
+        <div class="feat"><strong>🛵 Consegna a domicilio</strong><span>Tramite Just Eat e Glovo</span></div>
+        <div class="feat"><strong>📍 Torino centro</strong><span>Via Duchessa Jolanda 32</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TENDENZE (Home Menu) ══════════ -->
+  <section id="tendenze">
+    <p class="section-label reveal">Le Più Amate</p>
+    <h2 class="section-title reveal">Le Nostre Pizze di<br><em
+        style="font-style:italic;color:var(--rosso)">Tendenza</em></h2>
+    <div class="divider reveal"></div>
+
+    <div class="menu-grid reveal">
+      <!-- Pizza 1 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Margherita</span>
+          <span class="card-price">€ 7,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella</p>
+        <div class="badge-row"><span class="badge badge-veg">🥗 Classica</span></div>
+      </div>
+      <!-- Pizza 2 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Napoli</span>
+          <span class="card-price">€ 8,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella, acciughe</p>
+        <div class="badge-row"><span class="badge badge-popolare">⭐ Popolare</span></div>
+      </div>
+      <!-- Pizza 3 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Salamino</span>
+          <span class="card-price">€ 9,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella, salamino piccante</p>
+        <div class="badge-row"><span class="badge badge-piccante">🌶 Piccante</span></div>
+      </div>
+      <!-- Pizza 4 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Sueva</span>
+          <span class="card-price">€ 8,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella, cipolla</p>
+        <div class="badge-row"><span class="badge badge-popolare">👑 Della Casa</span></div>
+      </div>
+      <!-- Pizza 5 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Capricciosa</span>
+          <span class="card-price">€ 10,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella, prosciutto cotto, funghi, carciofini, olive, salamino piccante</p>
+      </div>
+      <!-- Pizza 6 -->
+      <div class="menu-card">
+        <div class="card-header">
+          <span class="card-name">Formaggi</span>
+          <span class="card-price">€ 9,00</span>
+        </div>
+        <p class="card-desc">Pomodoro, mozzarella, gorgonzola, fontina</p>
+        <div class="badge-row"><span class="badge badge-veg">🧀 Golosa</span></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+      <a href="menu.html" class="btn btn-verde" style="padding: 1rem 3rem; font-size: 1rem;">🍕 Vedi Tutto Il Menu</a>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <p>© 2026 <strong>Pizzeria La Sueva</strong> · Via Duchessa Jolanda 32, Torino · Tel. 011 434 6067</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>

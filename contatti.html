@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dove Siamo e Contatti – La Sueva Torino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <div class="nav-logo">La <span>Sueva</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="contatti.html" class="active">Contatti e Dove Siamo</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="menu.html" onclick="closeMenu()">Menu</a>
+  <a href="contatti.html" onclick="closeMenu()">Contatti e Dove Siamo</a>
+</div>
+
+<!-- ══════════ PAGE HEADER ══════════ -->
+<header class="page-header reveal">
+  <p class="section-label">Informazioni</p>
+  <h1 class="section-title">Dove Siamo & Contatti</h1>
+</header>
+
+<!-- ══════════ LOCATION ══════════ -->
+<section id="location">
+  <div class="location-grid">
+    <div class="loc-info reveal">
+      <div class="info-block">
+        <h4>📍 Indirizzo</h4>
+        <p>Via Duchessa Jolanda, 32<br>10138 Torino (TO)</p>
+      </div>
+      <div class="info-block">
+        <h4>📞 Telefono</h4>
+        <p><a href="tel:+390114346067">011 434 6067</a></p>
+      </div>
+      <div class="info-block">
+        <h4>🕐 Orari</h4>
+        <ul style="font-size: .92rem; color: var(--grigio); line-height: 1.6; margin-top: .3rem;">
+          <li><strong>Lun - Ven:</strong> 12:15–14:30, 18:30–23:30</li>
+          <li><strong>Sab:</strong> 18:30–23:30</li>
+          <li><strong>Dom:</strong> Chiuso</li>
+        </ul>
+      </div>
+      <a href="https://share.google/LPOFW4oISwFW0NDWE" target="_blank" rel="noopener" class="btn btn-verde" style="text-align:center; justify-content:center;">
+        🗺 Apri in Google Maps
+      </a>
+    </div>
+    <div class="map-wrap reveal" style="transition-delay:.15s">
+      <iframe
+        src="https://maps.google.com/maps?q=Via+Duchessa+Jolanda+32+Torino&output=embed&z=16"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mappa La Sueva Torino">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTS & DELIVERY ══════════ -->
+<section id="contacts">
+  <p class="section-label reveal">Contatti</p>
+  <h2 class="section-title reveal">Siamo qui<br>per te</h2>
+  <div class="divider reveal"></div>
+
+  <div class="contacts-grid reveal">
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <h4>Telefono</h4>
+      <p><a href="tel:+390114346067">011 434 6067</a></p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📍</div>
+      <h4>Indirizzo</h4>
+      <p>Via Duchessa Jolanda, 32<br>10138 Torino</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🛵</div>
+      <h4>Ordina Online</h4>
+      <p>Disponibile tramite APP</p>
+    </div>
+  </div>
+
+  <h3 style="text-align:center; color:#fff; font-family:var(--font-titolo); font-size:1.8rem; margin: 3rem 0 1.5rem;" class="reveal">Ordina comodamente a casa</h3>
+  
+  <div class="delivery-box reveal">
+    <div class="glovo-cta">
+      <p>Ordinare non è mai stato così veloce. Ordina subito tramite <strong>Glovo</strong>!</p>
+      <a
+        href="https://glovoapp.com/it/it/torino/stores/la-sueva-2-0?utm_source=google&utm_medium=organic&utm_campaign=google_reserve_place_order_action"
+        target="_blank" rel="noopener"
+        class="btn btn-glovo"
+      >
+        🍔 Ordina su Glovo
+      </a>
+    </div>
+    
+    <div class="je-cta">
+      <p>Scegli il comfort della tua poltrona. Consegniamo tramite <strong>Just Eat</strong>!</p>
+      <a
+        href="https://www.justeat.it/restaurants-pizzeria-lasueva-torino/menu"
+        target="_blank" rel="noopener"
+        class="btn btn-je"
+      >
+        🛵 Ordina su Just Eat
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <p>© 2026 <strong>Pizzeria La Sueva</strong> · Via Duchessa Jolanda 32, Torino · Tel. 011 434 6067</p>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
